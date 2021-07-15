@@ -1,0 +1,17 @@
+import java.util.Arrays;
+//将一个数组的每个元素扩大2倍
+public class ShuZu {
+    public static int[] func(int[] arr) {
+        int[] tmp = new int[arr.length];
+        for(int i = 0; i < arr.length; i++) {
+            tmp[i] = arr[i] * 2;
+        }
+        return tmp;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4};
+        int[] ret = func(arr);
+        System.out.println(Arrays.toString(ret));  //将数组打印
+    }
+}
