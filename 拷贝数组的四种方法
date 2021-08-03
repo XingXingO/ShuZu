@@ -1,0 +1,36 @@
+import java.util.Arrays;
+public class ShuZu {
+    public static int[] copyArray(int[] arr) {
+        int[] ret = new int[arr.length];
+        for(int i = 0; i < arr.length; i++) {
+            ret[i] = arr[i];
+        }
+        return ret;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4};
+        int[] ret = copyArray(arr);
+        System.out.println(Arrays.toString(ret));
+        //Arrays.toString()作用：将数组中的数以字符串的形式输出
+    }
+
+    public static void main1(String[] args) {
+        int[] arr = {1,2,3,4};
+        int[] ret = Arrays.copyOf(arr,arr.length);
+        System.out.println(Arrays.toString(ret));
+    }
+
+    public static void main2(String[] args) {
+        int[] arr = {1,2,3,4};
+        int[] ret = new int[arr.length];
+        System.arraycopy(arr,0,ret,0,arr.length);
+        System.out.println(Arrays.toString(ret));
+    }
+
+    public static void main3(String[] args) {
+        int[] arr = {1,2,3,4};
+        int[] ret = arr.clone(); //克隆
+        System.out.println(Arrays.toString(ret));
+    }
+}
