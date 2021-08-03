@@ -1,0 +1,46 @@
+//顺序查找
+/*public class ShuZu {
+    public static int find(int[] arr,int key) {
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] == key) {
+                return i;  //i：下标
+            }
+        }
+        return -1;  //没有找到
+    }
+    public static void main(String[] args) {
+        int[] arr = {1,23,45,31};
+        int ret = find(arr,23);
+        System.out.println("下标："+ret);
+    }
+}*/
+
+
+//二分查找（折半查找，给定一个有序的序列，才能使用二分查找 l：序列左边 r：序列右边 key:要查找的数字
+/*
+public class ShuZu {
+    public static int count = 0;  //定义一个静态的count变量
+    public static int binarySearch(int[] arr,int key) {
+        int left = 0;
+        int right = arr.length-1;
+        while(left <= right) {
+            count++;
+            //int mid = (left + right) / 2;
+            int mid = (left + right)>>>1;  //不需要除2，无符号右移一位
+            if(arr[mid] < key) {
+                left = mid+1;
+            }else if(arr[mid] == key ) {
+                return mid;
+            }else {
+                right = mid-1;
+            }
+        }
+        return -1;  //没有找到，返回-1
+    }
+    public static void main(String[] args) {
+        int[] arr = {2,5,9,10,13};
+        int ret = binarySearch(arr,10);
+        System.out.println("下标："+ret+" "+"次数:"+count);  //下标：3 次数：2
+    }
+}
+*/
